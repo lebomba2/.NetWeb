@@ -14,7 +14,7 @@
         // play audio
         toast.play();
 
-        // set the value of the toast data, this is coming from the HTML, lines 78,87,96
+        // set the value of the toast data, this is coming from the HTML, near lines 78,87,96
         $("#product").text($(this).parent().data("product").name);
         $("#code").text($(this).parent().data("code"));
 
@@ -22,7 +22,8 @@
         $("#toast").toast({ autohide: false }).toast("show");
     });
 
-    // listen for keypresses in the body
+    // listen for keypresses in the body of HTML doc
+    // keydown is an event action
     $("body").keydown(function (event) {
         // if the key matches the key defined above, hide the toast
         if (event.originalEvent.keyCode === keycode) {
